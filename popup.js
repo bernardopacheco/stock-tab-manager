@@ -4,12 +4,14 @@ const openStockTabs = async () => {
 
   const urls = [
     `https://www.morningstar.com/stocks/xnys/${ticker}/quote`,
+    `https://www.morningstar.com/stocks/xnas/${ticker}/quote`,
     `https://bastter.com/mercado/reit/${ticker}`,
     `https://finviz.com/quote.ashx?t=${ticker}`,
     `https://finance.yahoo.com/quote/${ticker}`,
     `https://seekingalpha.com/symbol/${ticker}`,
     `https://www.marketwatch.com/investing/stock/${ticker}`,
     `https://www.google.com/finance/quote/${ticker}:NYSE`,
+    `https://www.google.com/finance/quote/${ticker}:NASDAQ`,
   ];
 
   const tabPromises = urls.map((url) =>
